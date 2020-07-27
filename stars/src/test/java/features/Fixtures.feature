@@ -27,7 +27,7 @@ Feature: Trading Platform - fixtures
   Scenario: Create and delete a new fixture
   	Given I add a new fixture with id "9", a home team of "Newcastle" and an away team "Brighton" to the trading platform
   	And I wait for the new fixture with id "9" and then retrieve it 	
-  	When then I delete the fixture
+  	When I delete the fixture
   	Then the fixture with id "9" is no longer available
   	
   	

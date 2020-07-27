@@ -47,8 +47,6 @@ public class TradePlatformSteps{
 	public void i_wait_for_the_new_fixture_and_then_retrieve_it(String id) throws Throwable {
 		int i=Integer.parseInt(id); 
 		this.calls.getOneFixture(i);
-	
-		
 		}
 
 	@Then("^the home team has a teamId of home$")
@@ -56,7 +54,7 @@ public class TradePlatformSteps{
 		this.calls.checkHomeIdIsCorrect();
 	}
 
-	@When("^then I delete the fixture$")
+	@When("^I delete the fixture$")
 	public void then_I_delete_the_fixture() throws Throwable {
 	    int deleteThisFixture = this.calls.tp.getNewFixtureId();
 	    this.calls.deleteAFixtureById(deleteThisFixture);
