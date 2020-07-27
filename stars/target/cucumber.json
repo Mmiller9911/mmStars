@@ -1,0 +1,298 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "line": 11,
+        "name": "Retrieve all fixtures",
+        "description": "",
+        "id": "trading-platform---fixtures;retrieve-all-fixtures",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 425963200,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I get all fixtures",
+            "match": {
+              "location": "TradePlatformSteps.i_get_all_fixtures()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3244800,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I should have \"3\" fixtures returned in the response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 15
+                }
+              ],
+              "location": "TradePlatformSteps.i_should_have_fixtures_returned_in_the_response(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 100300,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "each fixture should have a fixtureId",
+            "match": {
+              "location": "TradePlatformSteps.each_fixture_should_have_a_fixtureId()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 10,
+            "name": "@tc1"
+          }
+        ]
+      },
+      {
+        "line": 17,
+        "name": "Store a new fixture in the database and then retrieve it as soon as it\u0027s available",
+        "description": "",
+        "id": "trading-platform---fixtures;store-a-new-fixture-in-the-database-and-then-retrieve-it-as-soon-as-it\u0027s-available",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 7648600,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I get all fixtures",
+            "match": {
+              "location": "TradePlatformSteps.i_get_all_fixtures()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 286200,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I should have \"3\" fixtures returned in the response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 15
+                }
+              ],
+              "location": "TradePlatformSteps.i_should_have_fixtures_returned_in_the_response(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2010299700,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I add a new fixture with id \"4\", a home team of \"Fulham\" and an away team \"Brighton\" to the trading platform",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 29
+                },
+                {
+                  "val": "Fulham",
+                  "offset": 49
+                },
+                {
+                  "val": "Brighton",
+                  "offset": 75
+                }
+              ],
+              "location": "TradePlatformSteps.i_add_a_new_fixture_to_the_trading_platform(String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2008855200,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I wait for the new fixture with id \"4\" and then retrieve it",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 36
+                }
+              ],
+              "location": "TradePlatformSteps.i_wait_for_the_new_fixture_and_then_retrieve_it(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4736100,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "I get all fixtures",
+            "match": {
+              "location": "TradePlatformSteps.i_get_all_fixtures()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 668400,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "I should have \"4\" fixtures returned in the response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 15
+                }
+              ],
+              "location": "TradePlatformSteps.i_should_have_fixtures_returned_in_the_response(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 67016600,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the home team has a teamId of home",
+            "match": {
+              "location": "TradePlatformSteps.the_home_team_has_a_teamId_of_home()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 16,
+            "name": "@tc2"
+          }
+        ]
+      },
+      {
+        "line": 27,
+        "name": "Create and delete a new fixture",
+        "description": "",
+        "id": "trading-platform---fixtures;create-and-delete-a-new-fixture",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5010763400,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "I add a new fixture with id \"9\", a home team of \"Newcastle\" and an away team \"Brighton\" to the trading platform",
+            "match": {
+              "arguments": [
+                {
+                  "val": "9",
+                  "offset": 29
+                },
+                {
+                  "val": "Newcastle",
+                  "offset": 49
+                },
+                {
+                  "val": "Brighton",
+                  "offset": 78
+                }
+              ],
+              "location": "TradePlatformSteps.i_add_a_new_fixture_to_the_trading_platform(String,String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2004950500,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "I wait for the new fixture with id \"9\" and then retrieve it",
+            "match": {
+              "arguments": [
+                {
+                  "val": "9",
+                  "offset": 36
+                }
+              ],
+              "location": "TradePlatformSteps.i_wait_for_the_new_fixture_and_then_retrieve_it(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2004093200,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "then I delete the fixture",
+            "match": {
+              "location": "TradePlatformSteps.then_I_delete_the_fixture()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 18133500,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "the fixture with id \"9\" is no longer available",
+            "match": {
+              "arguments": [
+                {
+                  "val": "9",
+                  "offset": 21
+                }
+              ],
+              "location": "TradePlatformSteps.the_fixture_is_no_longer_available(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 26,
+            "name": "@tc3"
+          }
+        ]
+      }
+    ],
+    "name": "Trading Platform - fixtures",
+    "description": "In order to trade on fixtures we must be able to perform CRUD operations on them\n\n\n1. Create and delete a new fixture.\n  1. Assert that the fixture no longer exists.",
+    "id": "trading-platform---fixtures",
+    "keyword": "Feature",
+    "uri": "Fixtures.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@platform"
+      }
+    ]
+  }
+]
